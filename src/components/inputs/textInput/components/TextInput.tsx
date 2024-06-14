@@ -48,6 +48,7 @@ export const TextInput = (props: Props) => {
     if (fileUploadRef) fileUploadRef.click();
   };
 
+  /* Disabling autoFocus, this feature now can be set as prop in recent versions, however for this fork, lets remove this logic
   createEffect(() => {
     if (!props.disabled && !isMobile() && inputRef) inputRef.focus();
   });
@@ -55,6 +56,7 @@ export const TextInput = (props: Props) => {
   onMount(() => {
     if (!isMobile() && inputRef) inputRef.focus();
   });
+  */
 
   const handleFileChange = (event: FileEvent<HTMLInputElement>) => {
     props.handleFileChange(event);
